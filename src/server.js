@@ -74,7 +74,7 @@ let Objeto = database.define('objeto', {
   nome: {
       type: Sequelize.STRING,
       allowNull: false
-  }, 
+  },  
   quantidade: {
     type: Sequelize.INTEGER,
     allowNull: false
@@ -111,7 +111,7 @@ let objetoResource = finale.resource({
 database
   .sync({ force: false })
   .then(() => {
-    app.listen(8081, () => {
-      console.log('listening to port localhost:8081')
+    app.listen(() => {
+      console.log('listening to port localhost')
     })
   })
